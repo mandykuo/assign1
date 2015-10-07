@@ -12,6 +12,8 @@ int x;
 int y=floor(random(450));
 int z;
 int d;
+int e=floor(random(640));
+int f=floor(random(480));
 
 
 void setup () {
@@ -43,7 +45,9 @@ void draw() {
   x%=640;
   
   image(img2,580,240);
-  image(img3,250,180);
+  
+  //treasure
+  image(img3,e,f);
   
   //blood
   rect(15,10,b,30);
