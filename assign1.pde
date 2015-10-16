@@ -11,7 +11,6 @@ int b=floor(random(200));
 int x;
 int y=floor(random(450));
 int z;
-int d;
 int e=floor(random(640));
 int f=floor(random(480));
 
@@ -31,19 +30,22 @@ void setup () {
 void draw() {
   background(0);
   
+  //background
+  
+  
   image(img5,z,0);
-  z+=2;
-  z%=640;
-  
-  image(img6,d-640,0);
-  d+=2;
-  d%=640;
+  image(img6,z-640,0);
+  image(img5,z-1280,0);
+  z++;
+  z%=1280;
   
   
+  //enemy
   image(img1,x,y);
   x+=4;
   x%=640;
   
+  //fighter
   image(img2,580,240);
   
   //treasure
@@ -53,6 +55,7 @@ void draw() {
   rect(15,10,b,30);
   fill(255,0,0);
   
+  //hp
   image(img4,10,10);
   
 }
